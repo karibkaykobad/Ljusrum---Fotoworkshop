@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s);
 const steg=['#steg1','#steg2','#steg3'];
-function visa(n,fokus){steg.forEach((s,i)=>$(s).hidden=i!==n);window.scrollTo(0,0);if(fokus)$(fokus).focus();}
+function visa(n,fokus){steg.forEach((s,i)=>$(s).hidden=i!==n);$('#band').hidden=n!==0;window.scrollTo(0,0);if(fokus)$(fokus).focus();}
 let valt='14 nov';
 $('#valj').addEventListener('submit',e=>{e.preventDefault();valt=document.querySelector('input[name=tid]:checked').value;$('#g-tid').textContent='Lördag '+valt+', 10–15';visa(1,'#r2');});
 $('#andra').addEventListener('click',()=>visa(0));  // valt tillfälle ligger kvar i radioknappen

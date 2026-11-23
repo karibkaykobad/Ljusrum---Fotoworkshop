@@ -10,7 +10,7 @@ const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&qu
 function lista(){const q=fraga.trim().toLowerCase();return DATA[tid].filter(r=>!q||r[1].toLowerCase().includes(q)||r[2].toLowerCase().includes(q));}
 function render(){
  const all=DATA[tid],rs=lista();
- $('#sum').textContent=`${all.length} av 10 platser bokade`;$('#sum2').textContent=`${10-all.length} lediga · lördag ${tid.replace('nov','november')}`;
+ $('#sum').textContent=`${all.length} av 10 platser bokade`;$('#matare').innerHTML=Array.from({length:10},(_,i)=>`<span class="${i<all.length?'fylld':''}"></span>`).join('');$('#matare').setAttribute('aria-label',`${all.length} av 10 platser bokade`);$('#sum2').textContent=`${10-all.length} lediga · lördag ${tid.replace('nov','november')}`;
  $('#tomt').hidden=rs.length>0;
  $('#kort').innerHTML=rs.map(r=>`<li><button type="button" data-id="${r[0]}" aria-label="Öppna ${esc(r[0])} ${esc(r[1])}"><span class="etikett">${r[0]}</span><span class="etikett">Öppna →</span><span class="n">${esc(r[1])}</span><span class="e">${esc(r[2])}</span></button></li>`).join('');
  $('#tabell tbody').innerHTML=rs.map(r=>`<tr class="${r[0]===valdId?'sel':''}" data-id="${r[0]}"><td><button type="button" data-id="${r[0]}" aria-label="Öppna ${esc(r[0])} ${esc(r[1])}"><span class="etikett">${r[0]}</span></button></td><td><button type="button" data-id="${r[0]}" tabindex="-1" aria-hidden="true">${esc(r[1])}</button></td><td><button type="button" data-id="${r[0]}" tabindex="-1" aria-hidden="true"><span class="ep">${esc(r[2])}</span></button></td><td><button type="button" data-id="${r[0]}" tabindex="-1" aria-hidden="true"><span class="etikett">${r[0]===valdId?'Öppen':'Öppna →'}</span></button></td></tr>`).join('');

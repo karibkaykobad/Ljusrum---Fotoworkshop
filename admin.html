@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Newsreader:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head><body>
-<header class="topp"><div><span class="etikett">Ljusrum · Admin</span><span class="etikett dampad">Bokningar</span></div></header>
+<header class="band-admin"><div><span class="etikett">Ljusrum · Admin</span><span class="etikett">Bokningar</span></div></header>
 <main id="app">
  <div class="vaxel stack g24">
   <div class="stack g8"><p class="etikett dampad">Arrangör</p><h1>Bokningar</h1></div>
@@ -13,7 +13,7 @@
  </div>
  <div class="lista-detalj">
   <div class="lista stack g24">
-   <div class="stack g8"><h3 id="sum"></h3><p class="liten dampad" id="sum2"></p></div>
+   <div class="sammanfattning"><h3 id="sum"></h3><div class="matare" id="matare" role="img"></div><p class="liten dampad" id="sum2"></p></div>
    <div class="falt sok"><label class="etikett dampad" for="sok">Sök deltagare</label><input id="sok" type="search" placeholder="Namn eller e-post" autocomplete="off"></div>
    <p id="tomt" class="dampad" hidden>Ingen deltagare matchar sökningen.</p>
    <ul class="kort" id="kort"></ul>

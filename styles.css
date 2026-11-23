@@ -1,6 +1,6 @@
 :root{
   --bg-sida:#F7F5F0;--bg-yta:#ECE9E1;--text:#161616;--text-dampad:#66625A;
-  --linje:#D8D4CA;--kant:#66625A;--accent:#8C2D19;--pa-accent:#F7F5F0;
+  --linje:#D8D4CA;--ockra:#F1E6D0;--lera:#EBD5CB;--kant:#66625A;--accent:#8C2D19;--pa-accent:#F7F5F0;
   --rum-4:4px;--rum-8:8px;--rum-12:12px;--rum-16:16px;--rum-24:24px;--rum-32:32px;--rum-48:48px;--rum-64:64px;
   --serif:'Newsreader',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
   --sida-x:24px;
@@ -108,3 +108,42 @@ dl.uppg dd{margin:0}
 @media (max-width:1199px){.panel[data-tom]{display:none}.har-detalj .lista-detalj>.lista,.har-detalj .vaxel{display:none}.panel .stang{display:none}.panel .tillbaka{display:inline-flex}}
 @media (min-width:1200px){.panel .tillbaka{display:none}.panel .stang{display:inline-flex}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---- Färgad version: två milda ytfärger + accent som band ---- */
+.topp>div{border-bottom:0}
+.band{background:var(--accent);color:var(--pa-accent)}
+.band-in{padding:32px var(--sida-x) 40px;display:flex;flex-direction:column;gap:32px}
+.band .etikett{color:var(--ockra)}
+.band h1{color:var(--pa-accent)}
+.band-bild{height:260px;overflow:hidden}
+.band-bild svg{display:block;width:100%;height:100%}
+.band a:focus-visible{outline-color:var(--pa-accent)}
+.knapp.ljus{background:var(--pa-accent);color:var(--text)}
+@media (min-width:768px){.band-in{flex-direction:row;align-items:center;gap:48px;padding-top:48px;padding-bottom:56px}.band-in>*{flex:1 1 0;min-width:0}.band-bild{height:320px}}
+.fakta{background:var(--bg-yta);padding:8px 24px}
+@media (min-width:768px){.fakta{padding:24px 32px}}
+.notis{background:var(--lera);border-left:4px solid var(--accent)}
+.notis .etikett{color:var(--accent)}
+.tid:has(input:checked){background:var(--ockra)}
+.ruta{padding:24px;display:flex;flex-direction:column;gap:16px}
+.ruta ul{gap:12px}
+.ruta li{position:relative;padding-left:20px}
+.ruta li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--accent)}
+.ruta.ingar{background:var(--ockra)}
+.ruta.tamed{background:var(--lera)}
+.obs{background:var(--bg-sida);border:1px solid var(--accent);padding:12px 16px;display:flex;gap:12px;align-items:baseline}
+.obs .etikett{color:var(--accent)}
+@media (min-width:768px){.listor>.ruta{padding:32px}}
+.bekr{background:var(--ockra);padding:24px}
+.bekr dl.uppg,.bekr dl.uppg>div{border-color:#D9CBB0}
+/* admin */
+.band-admin{background:var(--accent);color:var(--pa-accent)}
+.band-admin>div{display:flex;justify-content:space-between;padding:20px var(--sida-x)}
+.band-admin .etikett{color:var(--pa-accent)}
+.sammanfattning{background:var(--ockra);padding:24px;display:flex;flex-direction:column;gap:12px}
+.matare{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.matare span{height:16px;border:1px solid var(--text)}
+.matare span.fylld{background:var(--accent);border-color:var(--accent)}
+.panel{background:var(--ockra)}
+.tabell tr.sel td{background:var(--ockra)}
+.tabell th{background:var(--bg-yta)}
