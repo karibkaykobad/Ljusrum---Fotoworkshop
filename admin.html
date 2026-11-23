@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bokningar – Ljusrum admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Newsreader:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head><body>
+<header class="topp"><div><span class="etikett">Ljusrum · Admin</span><span class="etikett dampad">Bokningar</span></div></header>
+<main id="app">
+ <div class="vaxel stack g24">
+  <div class="stack g8"><p class="etikett dampad">Arrangör</p><h1>Bokningar</h1></div>
+  <fieldset class="tillfallen" id="tillfallen"><legend class="etikett dampad">Tillfälle</legend></fieldset>
+ </div>
+ <div class="lista-detalj">
+  <div class="lista stack g24">
+   <div class="stack g8"><h3 id="sum"></h3><p class="liten dampad" id="sum2"></p></div>
+   <div class="falt sok"><label class="etikett dampad" for="sok">Sök deltagare</label><input id="sok" type="search" placeholder="Namn eller e-post" autocomplete="off"></div>
+   <p id="tomt" class="dampad" hidden>Ingen deltagare matchar sökningen.</p>
+   <ul class="kort" id="kort"></ul>
+   <table class="tabell" id="tabell"><caption class="sr">Bokningar för valt tillfälle</caption><colgroup><col class="id"><col class="nam"><col><col class="akt"></colgroup>
+    <thead><tr><th scope="col">ID</th><th scope="col">Deltagare</th><th scope="col">E-post</th><th scope="col"><span class="sr">Åtgärd</span></th></tr></thead><tbody></tbody></table>
+  </div>
+  <aside class="panel" id="panel" data-tom aria-live="polite">
+   <p class="dampad" id="tom">Välj en bokning i listan för att se detaljer.</p>
+   <div class="stack g16" id="detalj" hidden>
+    <div><button class="knapp sekundar tillbaka" id="tillbaka" type="button"></button><button class="knapp sekundar stang" id="stang" type="button">Stäng</button></div>
+    <p class="etikett dampad" id="d-id"></p><h2 id="d-namn" tabindex="-1"></h2>
+    <dl class="uppg"><div><dt>Tillfälle</dt><dd id="d-tid"></dd></div><div><dt>Deltagare</dt><dd id="d-namn2"></dd></div><div><dt>E-post</dt><dd id="d-epost"></dd></div><div><dt>Pris</dt><dd>1 200 kr inkl. moms</dd></div><div><dt>Betalning</dt><dd>Faktura skickas på mejl</dd></div></dl>
+   </div>
+  </aside>
+ </div>
+</main>
+<script src="/admin.js"></script>
+</body></html>

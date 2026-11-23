@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ta kontroll över din kamera – Ljusrum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Newsreader:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head><body>
+<header class="topp"><div><a class="etikett" href="/">Ljusrum</a></div></header>
+<main>
+ <section id="steg1" class="stack g24" aria-labelledby="rubrik">
+  <div class="hero">
+   <div class="stack g16">
+    <p class="etikett dampad">Fotoworkshop · Södermalm</p>
+    <h1 id="rubrik">Ta kontroll över din kamera</h1>
+    <p class="tryck">En dag med handledning för vuxna nybörjare. Du lär dig bländare, slutartid, ISO, fokus, ljus och komposition.</p>
+   </div>
+   <div class="bild etikett dampad" role="img" aria-label="Bildplatshållare">Bild</div>
+  </div>
+  <div class="fakta">
+   <div><p class="etikett dampad">Tid</p><p class="v">Lördagar 10–15</p></div>
+   <div><p class="etikett dampad">Plats</p><p class="v">Södermalm, Stockholm</p></div>
+   <div><p class="etikett dampad">Pris</p><p class="v">1 200 kr inkl. moms</p></div>
+  </div>
+  <div class="notis"><p class="etikett">Krävs</p><p class="liten" style="font-size:14px">Egen kamera där du styr bländare, slutartid och ISO själv. Mobilkamera räcker inte.</p></div>
+  <form id="valj" class="stack g16" novalidate>
+   <fieldset class="tillfallen">
+    <legend><h2>Välj tillfälle</h2></legend>
+    <label class="tid"><input type="radio" name="tid" value="14 nov" checked><span class="mark" aria-hidden="true"></span><span class="t"><b>Lör 14 nov</b><small><span class="vald">Vald · </span>7 platser kvar</small></span></label>
+    <label class="tid"><input type="radio" name="tid" value="21 nov"><span class="mark" aria-hidden="true"></span><span class="t"><b>Lör 21 nov</b><small><span class="vald">Vald · </span>8 platser kvar</small></span></label>
+    <label class="tid"><input type="radio" name="tid" value="28 nov"><span class="mark" aria-hidden="true"></span><span class="t"><b>Lör 28 nov</b><small><span class="vald">Vald · </span>9 platser kvar</small></span></label>
+   </fieldset>
+   <div class="stack g12"><div><button class="knapp primar" type="submit">Granska bokning</button></div>
+   <p class="liten dampad tryck">Ingen betalning nu. Faktura skickas på mejl efter bokning.</p></div>
+  </form>
+  <div class="listor">
+   <div class="stack g8"><h3>Ingår</h3><ul><li>Handledning</li><li>Övningsmaterial</li><li>Fika</li></ul><p class="liten dampad">Lunch ingår inte.</p></div>
+   <div class="stack g8"><h3>Ta med</h3><ul><li>Kamera med manuella inställningar</li><li>Laddat batteri</li><li>Minneskort</li><li>Kläder efter väder</li></ul></div>
+  </div>
+ </section>
+
+ <section id="steg2" class="stack g24" hidden aria-labelledby="r2">
+  <h1 id="r2" tabindex="-1">Granska bokning</h1>
+  <dl class="uppg"><div><dt>Tillfälle</dt><dd id="g-tid"></dd></div><div><dt>Pris</dt><dd>1 200 kr inkl. moms</dd></div><div><dt>Betalning</dt><dd>Faktura skickas på mejl</dd></div></dl>
+  <div><button class="knapp sekundar" id="andra" type="button">Ändra tillfälle</button></div>
+  <form id="uppg" class="stack g16" novalidate>
+   <div class="falt"><label for="namn" class="etikett dampad">Namn</label><input id="namn" autocomplete="name" required aria-describedby="e-namn"><p id="e-namn" class="fel liten" hidden>Skriv ditt namn.</p></div>
+   <div class="falt"><label for="epost" class="etikett dampad">E-post</label><input id="epost" type="email" autocomplete="email" required aria-describedby="e-epost"><p id="e-epost" class="fel liten" hidden>Skriv en e-postadress, till exempel namn@exempel.se.</p></div>
+   <div><button class="knapp primar" type="submit">Bekräfta bokning</button></div>
+  </form>
+ </section>
+
+ <section id="steg3" class="stack g24" hidden aria-labelledby="r3">
+  <p class="etikett dampad">Bokning L107</p>
+  <h1 id="r3" tabindex="-1">Du är bokad</h1>
+  <dl class="uppg"><div><dt>Tillfälle</dt><dd id="b-tid"></dd></div><div><dt>Deltagare</dt><dd id="b-namn"></dd></div><div><dt>E-post</dt><dd id="b-epost"></dd></div><div><dt>Betalning</dt><dd>Faktura skickas till din e-post</dd></div></dl>
+  <div><button class="knapp sekundar" id="tillbaka" type="button">Tillbaka till workshopen</button></div>
+ </section>
+</main>
+<footer class="fot"><div class="etikett dampad">Ljusrum · Södermalm, Stockholm</div></footer>
+<script src="/app.js"></script>
+</body></html>
